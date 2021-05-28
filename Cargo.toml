@@ -1,0 +1,34 @@
+[package]
+name = "stroberry"
+version = "0.1.0"
+authors = ["Alsan Ali <morrutplz@protonmail.com>"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+dotenv = "0.15.0"
+env_logger = "0.8.3"
+humantime = "2.1.0"
+lazy_static = "1.4.0"
+log = "0.4.14"
+rand = "0.7.3"
+random_color = "0.5.1"
+reqwest = { version = "0.11.3", features = ["rustls-tls", "json", "multipart", "stream"] }
+serde = { version = "1.0", features = ["derive"] }
+tokio = { version = "1", features = ["rt-multi-thread", "macros", "time"] }
+
+[dependencies.serenity]
+git = "https://github.com/MorRutPlz/serenity.git"
+branch = "current"
+default-features = false
+features = [
+    "builder",
+    "cache",
+    "client",
+    "gateway",
+    "http",
+    "model",
+    "utils",
+    "rustls_backend",
+]
